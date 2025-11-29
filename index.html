@@ -2,19 +2,23 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Amitay Horwitz - CV</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
 
         <header>
-            <h1>Amitay Horwitz - CV</h1>
-            <p>Phone: +972-54-9792089</p>
-            <p>Email: <a href="mailto:amitayh@gmail.com">amitayh@gmail.com</a></p>
-            <p>
-                <a href="https://github.com/amitayh">GitHub</a> |
-                <a href="https://www.linkedin.com/in/amitayhorwitz/">LinkedIn</a> |
-                <a href="https://medium.com/@amitayh">Medium</a>
-            </p>
+            <div id="contact">
+                <h1>Amitay Horwitz - CV</h1>
+                <p>Phone: +972-54-9792089</p>
+                <p>Email: <a href="mailto:amitayh@gmail.com">amitayh@gmail.com</a></p>
+            </div>
+            <ul id="social">
+                <li><a href="https://github.com/amitayh">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/amitayhorwitz/">LinkedIn</a></li>
+                <li><a href="https://medium.com/@amitayh">Medium</a></li>
+            </ul>
         </header>
 
         <main>
@@ -26,41 +30,48 @@
             <section id="work-experience">
                 <h2>Work Experience</h2>
 
-                <article id="google">
-                    <h3><strong>Senior Software Engineer (L5)</strong>, Google (2020-2025)</h3>
-                    <p>Individual contributor in multiple projects in Search and Shopping: COVID and vaccines stats, Autos search, Shopping in Japan and EEA. The work involved the design and development of the features across the Search stack - from data acquisition, indexing, serving and UI. These features impact hundreds of millions of users daily.</p>
-                    <p>Served as technical lead for a few of the projects in aforementioned teams, supporting junior developers and interns. This includes guidance, design and code review, enabling them to achieve meaningful impact in the team while delivering on the projects' OKRs.</p>
-                </article>
+                <div id="employers">
+                    <article id="google">
+                        <h3><strong>Senior Software Engineer (L5)</strong>, Google (2020-2025)</h3>
+                        <p>Individual contributor in multiple projects in Search and Shopping: COVID and vaccines stats, Autos search, Shopping in Japan and EEA. The work involved the design and development of the features across the Search stack - from data acquisition, indexing, serving and UI. These features impact hundreds of millions of users daily.</p>
+                        <p>Served as technical lead for a few of the projects in aforementioned teams, supporting junior developers and interns. This includes guidance, design and code review, enabling them to achieve meaningful impact in the team while delivering on the projects' OKRs.</p>
+                    </article>
 
-                <article id="wix">
-                    <h3><strong>Senior Software Engineer</strong>, Wix.com (2015-2020)</h3>
-                    <ul>
-                        <li>Lead backend developer of several strategic products within Wix's Ascend suite (CRM): Wix Forms (team lead), Wix Invoices (team lead), Wix Contacts, Wix Inbox. This included the design, development, maintenance and monitoring of various microservices.</li>
-                        <li>In addition, I helped grow the team by onboarding and training new developers.</li>
-                        <li>Created an event-sourcing infrastructure which is used by many teams and projects.</li>
-                        <li>Led the design and initial implementation of <a href="https://github.com/wix/greyhound">Greyhound</a> an open source high-level SDK for Kafka (<a href="https://www.wix.engineering/post/building-a-high-level-sdk-for-kafka-greyhound-unleashed">announcement</a>).</li>
-                        <li>Creator and maintainer of internal tools: RPC console for API discoverability and introspection which is used across the company.</li>
-                        <li>Led hands-on workshops and trainings on various topics, primarily focusing on functional programming, testing and databases.</li>
-                    </ul>
-                </article>
+                    <article id="wix">
+                        <h3><strong>Senior Software Engineer</strong>, Wix.com (2015-2020)</h3>
+                        <ul>
+                            <li>Lead backend developer of several strategic products within Wix's Ascend suite (CRM): Wix Forms (team lead), Wix Invoices (team lead), Wix Contacts, Wix Inbox. This included the design, development, maintenance and monitoring of various microservices.</li>
+                            <li>In addition, I helped grow the team by onboarding and training new developers.</li>
+                            <li>Created an event-sourcing infrastructure which is used by many teams and projects.</li>
+                            <li>Led the design and initial implementation of <a href="https://github.com/wix/greyhound">Greyhound</a> an open source high-level SDK for Kafka (<a href="https://www.wix.engineering/post/building-a-high-level-sdk-for-kafka-greyhound-unleashed">announcement</a>).</li>
+                            <li>Creator and maintainer of internal tools: RPC console for API discoverability and introspection which is used across the company.</li>
+                            <li>Led hands-on workshops and trainings on various topics, primarily focusing on functional programming, testing and databases.</li>
+                        </ul>
+                    </article>
 
-                <article id="ibm">
-                    <h3><strong>Software Engineer</strong>, IBM /Trusteer (2014-2015)</h3>
-                    <p>Development and maintenance of Trusteer's Pinpoint for malware detection, under IBM's security division. The role included both UI-less frontend work (detecting and collecting data from potentially infected users' browsers), and high scale backend systems to analyze and act upon this data.</p>
-                </article>
+                    <article id="ibm">
+                        <h3><strong>Software Engineer</strong>, IBM /Trusteer (2014-2015)</h3>
+                        <ul>
+                            <li>Development and maintenance of Trusteer's Pinpoint for malware detection, under IBM's security division.</li>
+                            <li>The role included both UI-less frontend work (detecting and collecting data from potentially infected users' browsers), and high scale backend systems to analyze and act upon this data.</li>
+                        </ul>
+                    </article>
 
-                <article id="babylon">
-                    <h3><strong>Fullstack Web Developer</strong>, Babylon (2008-2014)</h3>
-                    <ul>
-                        <li>Lead developer of custom systems used for business intelligence. These tools provided critical insights and were used widely across the company, from media buyers to the CEO.</li>
-                        <li>Collaborated closely with the company's CIO, business analysts and DBAs to translate high-level business requirements into robust, data-driven systems.</li>
-                    </ul>
-                </article>
+                    <article id="babylon">
+                        <h3><strong>Fullstack Web Developer</strong>, Babylon (2008-2014)</h3>
+                        <ul>
+                            <li>Lead developer of custom systems used for business intelligence. These tools provided critical insights and were used widely across the company, from media buyers to the CEO.</li>
+                            <li>Collaborated closely with the company's CIO, business analysts and DBAs to translate high-level business requirements into robust, data-driven systems.</li>
+                        </ul>
+                    </article>
 
-                <article id="kcs">
-                    <h3><strong>Fullstack Web Developer</strong>, KCS (2007-2008)</h3>
-                    <p>Implementation of open source solutions for custom websites / e-commerce systems (WordPress, CMS Made Simple, etc.).</p>
-                </article>
+                    <article id="kcs">
+                        <h3><strong>Fullstack Web Developer</strong>, KCS (2007-2008)</h3>
+                        <ul>
+                            <li>Implementation of open source solutions for custom websites / e-commerce systems (WordPress, CMS Made Simple, etc.).</li>
+                        </ul>
+                    </article>
+                </div>
             </section>
 
             <section id="education">
