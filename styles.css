@@ -59,9 +59,8 @@ a:hover {
 body {
     max-width: 900px;
     margin: 0 auto;
-    padding: 2em 1.5em;
+    padding: 0em 2em;
     background-color: #fafafa;
-    text-align: justify;
 }
 
 p {
@@ -81,12 +80,23 @@ header {
     display: flex;
 }
 
-header #contact {
+#contact {
     flex: 1;
 }
 
-header #social {
+#social {
     align-content: center;
+}
+
+#social {
+    margin-left: 0;
+    list-style-type: none;
+}
+
+#social li {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
 }
 
 /* Sections */
