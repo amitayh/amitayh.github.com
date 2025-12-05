@@ -139,6 +139,16 @@ section {
     background-size: 42px;
 }
 
+#babylon {
+    background-image: url(assets/babylon.png);
+    background-size: 32px;
+}
+
+#kcs {
+    background-image: url(assets/kcs.jpg);
+    background-size: 42px;
+}
+
 /* Print styles */
 @media print {
     body {
