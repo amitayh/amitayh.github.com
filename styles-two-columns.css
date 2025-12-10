@@ -88,11 +88,11 @@ main {
 }
 
 #left-column {
-    flex: 2;
+    flex: 3;
 }
 
 #right-column {
-    flex: 3;
+    flex: 2;
 }
 
 #contact {
@@ -154,15 +154,6 @@ section {
     body {
         background-color: white;
         padding: 0;
-    }
-
-    main {
-        box-shadow: none;
-        padding: 0;
-        background-color: white;
-    }
-
-    h1 {
-        border-bottom: 1px solid #333;
+        font-size: 11px;
     }
 }
