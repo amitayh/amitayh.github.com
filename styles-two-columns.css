@@ -16,28 +16,26 @@ html {
 h1, h2 {
     font-family: Georgia, 'Times New Roman', serif;
     color: #1a1a1a;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1rem;
     line-height: 1.3;
 }
 
 h1 {
-    font-size: 2.2em;
+    font-size: 2.2rem;
     font-weight: normal;
 }
 
 h2 {
-    font-size: 1.4em;
+    font-size: 1.4rem;
     font-weight: normal;
     color: #444;
     border-bottom: 2px solid #e0e0e0;
 }
 
 h3 {
-    font-size: 1.1em;
+    font-size: 1.1rem;
     font-weight: 500;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5rem;
     color: #222;
 }
 
@@ -60,20 +58,28 @@ a:hover {
 body {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0em 2em;
+    padding: 0em 2rem;
     background-color: #fafafa;
 }
 
 p {
-    margin: 0.5em 0;
+    margin: 0 0 0.5rem;
+}
+
+p:last-child {
+    margin-bottom: 0;
 }
 
 ul {
-    margin: 0.5em 0 0.5em 1.5em;
+    margin: 0 0 0 1.5rem;
 }
 
 li {
-    margin: 0.5em 0;
+    margin: 0 0 0.5rem;
+}
+
+li:last-child {
+    margin-bottom: 0;
 }
 
 /* Header styling */
@@ -88,15 +94,16 @@ main {
 }
 
 #left-column {
-    flex: 3;
+    flex: 5;
 }
 
 #right-column {
-    flex: 2;
+    flex: 3;
 }
 
 #contact {
     flex: 1;
+    padding: 1rem 0 2rem;
 }
 
 #social {
@@ -111,42 +118,29 @@ main {
 #social li {
     display: flex;
     align-items: center;
-    gap: 0.5em;
+    gap: 0.5rem;
 }
 
 /* Sections */
 section {
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
 }
 
-#work-experience article {
-    background-repeat: no-repeat;
-    background-position: top right;
+#companies {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    gap: 1em;
 }
 
-#google {
-    background-image: url(assets/google.svg);
-    background-size: 32px;
+/*
+#experience article {
+    border-left: 1px solid #e0e0e0;
+    padding-left: 1em;
 }
+*/
 
-#wix {
-    background-image: url(assets/wix.svg);
-    background-size: 42px;
-}
-
-#ibm {
-    background-image: url(assets/ibm.svg);
-    background-size: 42px;
-}
-
-#babylon {
-    background-image: url(assets/babylon.png);
-    background-size: 32px;
-}
-
-#kcs {
-    background-image: url(assets/kcs.jpg);
-    background-size: 42px;
+#experience article h3 {
+    margin-top: 0;
 }
 
 /* Print styles */
@@ -154,6 +148,6 @@ section {
     body {
         background-color: white;
         padding: 0;
-        font-size: 11px;
+        font-size: 10px;
     }
 }
