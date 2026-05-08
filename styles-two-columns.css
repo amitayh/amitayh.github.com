@@ -48,6 +48,10 @@ em {
   font-weight: 500;
 }
 
+address {
+  font-style: normal;
+}
+
 /* Links */
 a {
   color: #0066cc;
@@ -92,22 +96,38 @@ header {
 }
 
 main {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-areas:
+    "experience summary"
+    "experience education"
+    "experience public-speaking"
+    "experience skills";
+  grid-template-columns: 5fr 3fr;
+  grid-template-rows: auto auto auto 1fr;
   gap: 2em;
-}
-
-#left-column {
-  flex: 5;
-}
-
-#right-column {
-  flex: 3;
 }
 
 #contact {
   flex: 1;
   padding: 1rem 0 2rem;
+}
+
+#contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+#contact-list li {
+  margin: 0;
+}
+
+#contact-list li+li::before {
+  content: "|";
+  margin-right: 0.5rem;
+  color: #e0e0e0;
 }
 
 #social {
@@ -126,8 +146,24 @@ main {
 }
 
 /* Sections */
-section {
-  margin-bottom: 2rem;
+#experience {
+  grid-area: experience;
+}
+
+#summary {
+  grid-area: summary;
+}
+
+#education {
+  grid-area: education;
+}
+
+#public-speaking {
+  grid-area: public-speaking;
+}
+
+#skills {
+  grid-area: skills;
 }
 
 #experience article {
@@ -139,6 +175,9 @@ section {
   body {
     background-color: white;
     padding: 0;
-    font-size: 9px;
+  }
+
+  html {
+    font-size: 10px;
   }
 }
