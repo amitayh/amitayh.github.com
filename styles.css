@@ -1,139 +1,193 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Base fonts */
 html {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
 }
 
 /* Serif fonts for headings */
-h1, h2 {
-    font-family: Georgia, 'Times New Roman', serif;
-    color: #1a1a1a;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-    line-height: 1.3;
+h1,
+h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  line-height: 1.3;
 }
 
 h1 {
-    font-size: 2.2em;
-    font-weight: normal;
+  font-size: 2.2rem;
+  font-weight: normal;
 }
 
 h2 {
-    font-size: 1.4em;
-    font-weight: normal;
-    color: #444;
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: #444;
+}
+
+main h2 {
+  border-bottom: 2px solid #e0e0e0;
 }
 
 h3 {
-    font-size: 1.05em;
-    font-weight: normal;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-    color: #222;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #222;
 }
 
 em {
-    font-style: italic;
-    font-weight: 500;
+  font-style: italic;
+  font-weight: 500;
+}
+
+address {
+  font-style: normal;
 }
 
 /* Links */
 a {
-    color: #0066cc;
-    text-decoration: none;
+  color: #0066cc;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Body text */
 body {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0em 2em;
-    background-color: #fafafa;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0em 2rem;
+  background-color: #fafafa;
 }
 
 p {
-    margin: 0.5em 0;
+  margin: 0 0 0.5rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
 }
 
 ul {
-    margin: 0.5em 0 0.5em 1.5em;
+  margin: 0 0 0 1.5rem;
 }
 
 li {
-    margin: 0.5em 0;
+  margin: 0 0 0.5rem;
+}
+
+li:last-child {
+  margin-bottom: 0;
 }
 
 /* Header styling */
 header {
-    display: flex;
+  display: flex;
+}
+
+main {
+  display: grid;
+  grid-template-areas:
+    "experience summary"
+    "experience education"
+    "experience public-speaking"
+    "experience skills";
+  grid-template-columns: 5fr 3fr;
+  grid-template-rows: auto auto auto 1fr;
+  gap: 2em;
 }
 
 #contact {
-    flex: 1;
+  flex: 1;
+  padding: 1rem 0 2rem;
+}
+
+#contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+#contact-list li {
+  margin: 0;
+}
+
+#contact-list li+li::before {
+  content: "|";
+  margin-right: 0.5rem;
+  color: #e0e0e0;
 }
 
 #social {
-    align-content: center;
+  align-content: center;
 }
 
 #social {
-    margin-left: 0;
-    list-style-type: none;
+  margin-left: 0;
+  list-style-type: none;
 }
 
 #social li {
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 /* Sections */
-section {
-    margin-bottom: 2em;
+article h3 {
+  display: flex;
+  align-items: center;
 }
 
-/* Work experience */
-#work-experience article {
-    border-left: 1px solid #e0e0e0;
-    padding: 0 0 1em 1em;
+article h3 img {
+  width: 1.5rem;
+  margin-right: 0.5rem;
 }
 
-#work-experience h3 {
-    margin-top: 0;
+#experience {
+  grid-area: experience;
 }
 
-#employers {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0 1em;
+#summary {
+  grid-area: summary;
+}
+
+#education {
+  grid-area: education;
+}
+
+#public-speaking {
+  grid-area: public-speaking;
+}
+
+#skills {
+  grid-area: skills;
+}
+
+#experience article {
+  margin-bottom: 1rem;
 }
 
 /* Print styles */
 @media print {
-    body {
-        background-color: white;
-        padding: 0;
-    }
+  body {
+    background-color: white;
+    padding: 0;
+  }
 
-    main {
-        box-shadow: none;
-        padding: 0;
-        background-color: white;
-    }
-
-    h1 {
-        border-bottom: 1px solid #333;
-    }
+  html {
+    font-size: 10px;
+  }
 }
