@@ -146,6 +146,16 @@ main {
 }
 
 /* Sections */
+article h3 {
+  display: flex;
+  align-items: center;
+}
+
+article h3 img {
+  width: 1.5rem;
+  margin-right: 0.5rem;
+}
+
 #experience {
   grid-area: experience;
 }
