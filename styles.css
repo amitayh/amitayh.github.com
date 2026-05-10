@@ -145,6 +145,11 @@ main {
   gap: 0.5rem;
 }
 
+#social img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 /* Sections */
 .logo-title {
   display: flex;
